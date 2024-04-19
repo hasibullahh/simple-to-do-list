@@ -1,113 +1,128 @@
-/* CSS */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Open Sans', sans-serif; /* Use a clean and modern font */
     margin: 0;
     padding: 0;
-}
-
-.container {
-    max-width: 600px;
+    background-color: #f2f6f9; /* Light background with a subtle blue tint */
+  }
+  
+  .app-container {
+    max-width: 700px; /* Increase container width slightly */
     margin: 50px auto;
-    padding: 20px;
+    padding: 30px;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
+    border-radius: 10px; /* Increase border radius for softer corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  }
+  
+  h1 {
     text-align: center;
-    color: #333;
-}
-
-input[type="text"] {
-    width: 70%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
+    color: #2980b9; /* Use a vibrant blue accent color */
+    font-size: 24px; /* Increase heading size */
+    font-weight: 300; /* Set lighter weight for a more relaxed look */
+  }
+  
+  .task-input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  #newTaskInput {
+    flex: 1;
+    padding: 12px 15px; /* Adjusted padding for better spacing */
+    border: 0.5px solid #ccc; /* Adjusted border thickness for cleaner look */
     border-radius: 5px;
-}
-
-button {
-    padding: 10px 15px;
-    margin-left: 5px;
-    background-color: #4CAF50;
+    font-size: 18px; /* Increase input field size */
+    font-family: inherit; /* Inherit font from body */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1); /* Subtle box-shadow for text box */
+  }
+  
+  #addTaskBtn {
+    background-color: #2980b9;
     color: #fff;
     border: none;
     border-radius: 5px;
+    padding: 12px 20px; /* Adjust padding for better button proportions */
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-ul {
+    margin-left: 5px; /* Increased margin-left for better spacing */
+  }
+  
+  #addTaskBtn:hover {
+    background-color: darken(#2980b9, 10%); /* Darken accent color on hover */
+  }
+  
+  ul {
     list-style-type: none;
     padding: 0;
-}
-
-.task-item {
-    position: relative;
-    padding: 10px;
-    margin-bottom: 5px;
+  }
+  
+  .task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px; /* Increase padding for better spacing */
+    margin-bottom: 10px; /* Reduce margin slightly for a more compact feel */
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .task-item.completed {
+    background-color: #eee;
+  }
+  
+  .task-text {
+    font-size: 18px; /* Increase task text size for better readability */
+    color: #333;
+    flex: 1;
+    transition: text-decoration 0.3s ease;
+  }
+  .edit-btn,
+  .delete-btn {
+    padding: 8px 15px; /* Reduce button size for a cleaner look */
     border: 1px solid #ccc;
     border-radius: 5px;
-}
-
-.task-text {
-    display: inline-block;
-    width: calc(100% - 130px);
-    color: #333;
-}
-
-.edit,
-.delete,
-.save {
-    background-color: #2196F3;
-    color: #fff;
-    border: none;
+    background-color: #f5f5f5; /* Lighter background for buttons */
+    color: #333; /* Darker text color for better contrast */
+    cursor: pointer;
+    margin-left: 10px; /* Maintain spacing */
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-btn:hover,
+  .delete-btn:hover {
+    background-color: #ddd; /* Consistent hover effect */
+  }
+  
+  .task-item.completed .task-text {
+    text-decoration: line-through; /* Strikethrough for completed tasks */
+  }
+  
+  .filter-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .filter-btn {
+    padding: 10px 15px;
+    border: none; /* Remove border for a cleaner button style */
     border-radius: 5px;
-    padding: 5px 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-}
-
-.edit:hover,
-.delete:hover,
-.save:hover {
-    background-color: #0b7dda;
-}
-
-.task-item.editing .task-text {
-    display: none; /* Hide task text when editing */
-}
-
-.task-item.editing .edit,
-.task-item.editing .delete,
-.task-item.editing .save {
-    display: inline-block; /* Show edit, delete, and save buttons when editing */
-}
-/* Add this CSS to darken the background and disable interactions when editing a task */
-.container.editing-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-    z-index: 999;
-    display: none; /* Initially hide overlay */
-}
-
-/* Add this CSS to disable interactions only for non-editing items */
-.container.editing-overlay .task-item:not(.editing) {
-    filter: blur(4px); /* Blur task items when editing */
-}
-
-/* Add this CSS to disable interactions for text box and save button */
-.container.editing-overlay #taskInput,
-.container.editing-overlay .save {
-    pointer-events: auto; /* Allow interactions with text box and save button */
-}
+    margin-right: 10px; /* Maintain spacing */
+    font-size: 16px; /* Reduce filter button text size */
+  }
+  
+  .filter-btn.active {
+    background-color: #2980b9; /* Accent color for active filter */
+    color: #fff;
+  }
+  
+  .due-date {
+    font-size: 12px;
+    color: #aaa;
+    margin-left: 10px; /* Maintain spacing */
+  }
+    
