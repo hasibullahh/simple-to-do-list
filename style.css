@@ -1,24 +1,24 @@
 body {
-    font-family: 'Open Sans', sans-serif; /* Use a clean and modern font */
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f2f6f9; /* Light background with a subtle blue tint */
+    background-color: #f2f6f9;
   }
   
   .app-container {
-    max-width: 700px; /* Increase container width slightly */
+    max-width: 700px;
     margin: 50px auto;
     padding: 30px;
     background-color: #fff;
-    border-radius: 10px; /* Increase border radius for softer corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
   h1 {
     text-align: center;
-    color: #2980b9; /* Use a vibrant blue accent color */
-    font-size: 24px; /* Increase heading size */
-    font-weight: 300; /* Set lighter weight for a more relaxed look */
+    color: #2980b9;
+    font-size: 24px;
+    font-weight: 300;
   }
   
   .task-input-container {
@@ -29,12 +29,12 @@ body {
   
   #newTaskInput {
     flex: 1;
-    padding: 12px 15px; /* Adjusted padding for better spacing */
-    border: 0.5px solid #ccc; /* Adjusted border thickness for cleaner look */
+    padding: 12px 15px;
+    border: 0.5px solid #ccc;
     border-radius: 5px;
-    font-size: 18px; /* Increase input field size */
-    font-family: inherit; /* Inherit font from body */
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1); /* Subtle box-shadow for text box */
+    font-size: 18px;
+    font-family: inherit;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   }
   
   #addTaskBtn {
@@ -42,14 +42,14 @@ body {
     color: #fff;
     border: none;
     border-radius: 5px;
-    padding: 12px 20px; /* Adjust padding for better button proportions */
+    padding: 12px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-left: 5px; /* Increased margin-left for better spacing */
+    margin-left: 5px;
   }
   
   #addTaskBtn:hover {
-    background-color: darken(#2980b9, 10%); /* Darken accent color on hover */
+    background-color: darken(#2980b9, 10%);
   }
   
   ul {
@@ -61,8 +61,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 20px; /* Increase padding for better spacing */
-    margin-bottom: 10px; /* Reduce margin slightly for a more compact feel */
+    padding: 15px 20px;
+    margin-bottom: 10px;
     border-bottom: 1px solid #ddd;
     cursor: pointer;
     transition: background-color 0.2s ease;
@@ -73,30 +73,30 @@ body {
   }
   
   .task-text {
-    font-size: 18px; /* Increase task text size for better readability */
+    font-size: 18px;
     color: #333;
     flex: 1;
     transition: text-decoration 0.3s ease;
   }
   .edit-btn,
   .delete-btn {
-    padding: 8px 15px; /* Reduce button size for a cleaner look */
+    padding: 8px 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #f5f5f5; /* Lighter background for buttons */
-    color: #333; /* Darker text color for better contrast */
+    background-color: #f5f5f5;
+    color: #333;
     cursor: pointer;
-    margin-left: 10px; /* Maintain spacing */
+    margin-left: 10px;
     transition: background-color 0.3s ease;
   }
   
   .edit-btn:hover,
   .delete-btn:hover {
-    background-color: #ddd; /* Consistent hover effect */
+    background-color: #ddd;
   }
   
   .task-item.completed .task-text {
-    text-decoration: line-through; /* Strikethrough for completed tasks */
+    text-decoration: line-through;
   }
   
   .filter-container {
@@ -107,22 +107,22 @@ body {
   
   .filter-btn {
     padding: 10px 15px;
-    border: none; /* Remove border for a cleaner button style */
+    border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-right: 10px; /* Maintain spacing */
-    font-size: 16px; /* Reduce filter button text size */
+    margin-right: 10px;
+    font-size: 16px;
   }
   
   .filter-btn.active {
-    background-color: #2980b9; /* Accent color for active filter */
+    background-color: #2980b9;
     color: #fff;
   }
   
   .due-date {
     font-size: 12px;
     color: #aaa;
-    margin-left: 10px; /* Maintain spacing */
+    margin-left: 10px;
   }
     
